@@ -1,3 +1,22 @@
+:root {
+  /* website color pallete */
+  --header-bg-clr: #e7ecef;
+  --sidebar-bg-clr: #274c77;
+  --main-bg-clr: #f8f8f8;
+  --nav-btn-clr: ;
+  --cards-btn-clr: ;
+  --clr-primary: ;
+  --clr-secondary: ;
+  /* website color pallete */
+
+  /* layout sizing */
+  --x-side-bar: 270px;
+  --x-header: 1fr;
+  --y-header: 20%;
+  --main: 1fr;
+  /* layout sizing */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +27,8 @@
 
 body {
   display: grid;
-  grid-template-columns: minmax(300px, 20%) 1fr;
-  grid-template-rows: 20% 1fr;
+  grid-template-columns: var(--x-side-bar) var(--x-header);
+  grid-template-rows: var(--y-header) var(--main);
 
   min-height: 100vh;
 }
@@ -17,7 +36,7 @@ body {
 header,
 .side-bar,
 main {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
 }
@@ -26,40 +45,74 @@ header {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-column: 2 / 3;
-
   padding-inline: 2em;
-  background-color: #fff;
+  background-color: var(--header-bg-clr);
 }
 
 .header-row-one {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 100px;
 }
 
 .upper-left-header {
+  min-width: 400px;
   display: flex;
   align-items: center;
   border: 1px solid black;
+  gap: 5px;
   flex: 1;
 }
 
-#search {
-  width: min(500px, 100%);
+.search-icon {
+  margin-top: 3px;
+  height: 20px;
 }
+
+#search {
+  border: 1px solid grey;
+  /* box-shadow: inset 0px 0px 10px rgb(224, 224, 224); */
+  border-radius: 15px;
+  max-width: 550px;
+  flex: 1;
+  height: 40px;
+  padding: 0.35em 0.55em;
+}
+
+#search:focus {
+  outline: none;
+}
+
 .upper-right-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  gap: 20px;
   border: 1px solid black;
+  max-width: 250px;
+  flex: 1;
 }
 
-.upper-right-header p {
-  font-size: 1rem;
+.upper-right-header div {
+  border: 1px solid black;
+  flex-shrink: 2;
+}
+
+.upper-right-header div:first-of-type,
+.upper-right-header div:nth-child(2) {
+  flex-grow: 0;
+}
+
+.upper-right-header div:last-of-type {
+  font-family: 1.05;
+  font-weight: bold;
+  line-height: 1.4;
+  flex: 1;
 }
 
 .bell {
-  width: 25px;
+  width: 20px;
 }
 
 .user {
@@ -69,20 +122,17 @@ header {
 }
 
 .upper-right-header img {
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  height: 45px;
-}
-
-.search-icon {
-  height: 25px;
+  height: 35px;
 }
 
 .side-bar {
-  background-color: blue;
+  background-color: var(--sidebar-bg-clr);
   grid-row: 1 / 4;
 }
 
 main {
-  background-color: green;
+  background-color: var(--main-bg-clr);
   grid-column: 2 / 3;
 }
