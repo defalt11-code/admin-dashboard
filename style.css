@@ -29,6 +29,7 @@ body {
   display: grid;
   grid-template-columns: var(--x-side-bar) var(--x-header);
   grid-template-rows: var(--y-header) var(--main);
+  min-height: 100vh;
 }
 
 header,
