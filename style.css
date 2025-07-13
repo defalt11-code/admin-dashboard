@@ -396,5 +396,31 @@ main {
 .trending-container span:first-of-type {
   font-weight: 500;
 }
-
 /* MAIN SECTION END */
+
+@media screen and (max-width: 1080px) {
+  :root {
+    --x-side-bar: 70px;
+  }
+
+  }
+  .logo p {
+    display: none;
+  }
+
+  .nav-side-one,
+  .nav-side-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  li {
+    padding: 0.55em 0.85em;
+  }
+
+  li p {
+    display: none;
+  }
+}
