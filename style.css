@@ -35,10 +35,11 @@ body {
 header,
 .side-bar,
 main {
-  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
 }
+
+/* HEADER SECTION START*/
 
 header {
   display: grid;
@@ -62,7 +63,6 @@ header {
   min-width: 400px;
   display: flex;
   align-items: center;
-  /* border: 1px solid black; */
   gap: 10px;
   flex: 1;
 }
@@ -88,7 +88,6 @@ header {
 .header-row-two {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid black; */
   gap: 20px;
 }
 
@@ -109,7 +108,6 @@ header {
   flex-direction: column;
   gap: 10px;
   justify-content: center;
-  /* border: 1px solid black; */
 }
 
 .user-container p {
@@ -126,13 +124,11 @@ header {
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  /* border: 1px solid black; */
   max-width: 250px;
   flex: 1;
 }
 
 .upper-right-header div {
-  /* border: 1px solid black; */
   flex-shrink: 2;
 }
 
@@ -165,7 +161,6 @@ header {
 }
 
 .lower-right-header {
-  /* border: 1px solid black; */
   display: flex;
   gap: 10px;
   align-items: center;
@@ -184,6 +179,10 @@ button:hover {
   cursor: pointer;
 }
 
+/* HEADER SECTION END*/
+
+/* SIDEBAR SECTION START */
+
 .side-bar {
   padding-block: 50px;
   display: flex;
@@ -192,6 +191,23 @@ button:hover {
 
   background-color: var(--sidebar-bg-clr);
   grid-row: 1 / 4;
+  color: white;
+}
+
+.logo {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo p {
+  font-weight: 500;
+  font-size: 1.35rem;
   color: white;
 }
 
@@ -216,7 +232,6 @@ li {
   list-style: none;
   padding: 1em 2em;
   border-radius: 8px;
-  /* border: 1px solid white; */
 }
 
 li p {
@@ -228,22 +243,9 @@ li:hover {
   background-color: #386ba5b2;
 }
 
-.logo {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* SIDEBAR SECTION END */
 
-.logo img {
-  height: 30px;
-}
-
-.logo p {
-  font-weight: 500;
-  font-size: 1.35rem;
-  color: white;
-}
+/* MAIN SECTION START */
 
 main {
   display: flex;
@@ -394,3 +396,5 @@ main {
 .trending-container span:first-of-type {
   font-weight: 500;
 }
+
+/* MAIN SECTION END */
