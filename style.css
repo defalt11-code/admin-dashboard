@@ -402,8 +402,6 @@ main {
   :root {
     --x-side-bar: 70px;
   }
-
-  }
   .logo p {
     display: none;
   }
