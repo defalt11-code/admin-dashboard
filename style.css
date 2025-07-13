@@ -177,6 +177,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #001d3dc7;
 }
 
 /* HEADER SECTION END*/
